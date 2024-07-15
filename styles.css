@@ -1,0 +1,114 @@
+:root {
+  /* font-families */
+  --cursive: "Architects Daughter", monospace;
+  --subtitle: "Titillium Web", sans-serif;
+  --parag: "Dosis", sans-serif;
+  /* colours */
+  --black: #0b090a;
+  --red: #e5383b;
+  --grey: #b1a7a6;
+  --white: #f5f3f4;    
+  --green: #5ABAB5;
+}
+
+img {
+  max-width: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--white);
+  text-decoration: none;
+ }
+
+body {
+  font-family: var(--parag);
+  color: var(--white);
+  background: var(--black);
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+
+/* HEADER SECTION  */
+
+.header {
+  display: flex;
+  justify-content: space-between; /* moves the logo and menu to each side */
+  align-items: center; /* centers them vertically */
+  padding: 1rem;
+  color: var(--red);
+  border-bottom: 1px solid var(--grey);
+}
+
+.header__title {
+  font-family: var(--cursive);
+  font-size: 3rem;
+  margin: 0;
+}
+
+.navbar {
+  flex-basis: 75%; /* the navbar's width was the width of the items, but now it's wider.the issue now is the menu has moved to the left */
+}
+
+.nav__list {
+  display: flex; /* places the menu in a row */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  align-items: center; /* centers the menu vertically even further to align with buttom */
+}
+
+.nav__list {
+  cursor: pointer;  
+  justify-content: flex-end; /* this fixes the issue in .navbar flex-basis */
+}
+
+.nav__item:hover {
+  text-decoration: underline;
+  color: var(--white);
+}
+
+.nav__item {
+  text-align: center; /* centers the text AND the button within the changing space */
+  flex-grow: .1; /* decimals are valid */
+}
+.nav__item a {
+
+}
+
+.nav__item button {
+  font-family: var(--subtitle);
+  font-size: inherit;
+  font-weight: 600;
+  color: var(--black);
+  background: var(--green);
+  appearance: none;
+  border: none;
+  padding: .5rem 1rem;
+  border-radius: 8px;
+}
+
+.nav__item button:hover {
+  border: 1px solid var(--green);
+}
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 580) {
+
+}
+
+@media only screen and (min-width: 900) {
+
+}
