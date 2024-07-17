@@ -24,6 +24,9 @@ img {
 
 }
 
+body {
+  font-size: 18px;
+}
 *,
 *::before,
 *::after {
@@ -113,6 +116,14 @@ html {
 }
 
 
+/* MAIN SECTION */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 /* HERO SECTION */
 
 .hero {
@@ -194,15 +205,34 @@ html {
 
 /* MEDIA QUERIES */
 
-@media only screen and (min-width: 780px) {
+@media only screen and (min-width: 880px) {
 
-  .info__section {
-    flex-direction: row;
-    justify-content: space-between;
+  .main {
+    margin-top: 2em;
+    flex-direction: row-reverse;
+    /* gap: 0; */
   }
 
+  .details {
+    flex: 0 1 auto;
+  }
+
+  .info__section {
+    flex: 1 0 auto;
+    border: 1px solid var(--grey);
+    border-radius: 32px;
+    background: var(--white);
+    color: var(--black);
+    margin: 0 2rem;
+    max-height: 50%;
+  }
   
+  .info__card {
+    padding: 2rem 0 0 2rem;
+  }
 }
+
+
 @media only screen and (max-width: 580px) {
 
   .header {
